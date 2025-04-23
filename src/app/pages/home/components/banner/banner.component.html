@@ -1,0 +1,30 @@
+<section class="banner">
+    <!-- Flecha izquierda -->
+    <button class="arrow left" (click)="prevSlide()">❮</button>
+  
+    <!-- Slides -->
+    <div
+      class="slide"
+      *ngFor="let slide of slides; let i = index"
+      [class.active]="i === currentSlide"
+      [style.backgroundImage]="'url(' + slide.imagen + ')'"
+    >
+      <div class="slide-content">
+        <h2>{{ slide.titulo }}</h2>
+        <p>{{ slide.descripcion }}</p>
+        <a class="btn-link" href="#">Más información</a>
+      </div>
+    </div>
+  
+    <!-- Flecha derecha -->
+    <button class="arrow right" (click)="nextSlide()">❯</button>
+  
+    <!-- Puntos indicadores -->
+    <div class="indicators">
+      <span
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"
+      ></span>
+    </div>
+  </section>  

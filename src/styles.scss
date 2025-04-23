@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+// Colores institucionales
+$verde-claro: #22CC23;
+$verde-oscuro: #228B22;
+$naranja-claro: #FFA420;
+$naranja-oscuro: #FF5400;
+$negro: #000000;
+$gris30: #B3B3B3; // Aproximación para 30%
+$gris60: #666666; // Aproximación para 60%
+
+// Fuente personalizada
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $negro;
+}
+
+/* Añadir algo de espacio entre secciones */
+main {
+    min-height: 80vh;
+}
+  
+  /* Asegurar que el footer no quede encima del contenido */
+  app-footer {
+    margin-top: 4rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+  

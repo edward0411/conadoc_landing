@@ -1,0 +1,66 @@
+.info-container {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .card-info {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    min-height: 180px;
+  
+    h2 {
+      color: #228B22;
+      font-size: 1.8rem;
+      width: 35%;
+      text-align: right;
+      margin: 0 2rem 0 0;
+    }
+  
+    .separator {
+      width: 3px;
+      background-color: #FFA420;
+      margin: 0 1rem;
+      align-self: stretch;
+    }
+  
+    p {
+      flex: 1;
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+      padding-left: 2rem;
+    }
+  }
+  
+  .card-info.right {
+    flex-direction: row-reverse;
+  
+    h2 {
+      text-align: left;
+      margin: 0 0 0 2rem;
+    }
+  
+    p {
+      padding-left: 0;
+      padding-right: 2rem;
+    }
+  }
+  

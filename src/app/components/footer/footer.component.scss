@@ -1,0 +1,58 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .footer-left {
+      flex: 1;
+      p {
+        margin: 0.2rem 0;
+        font-size: 0.9rem;
+      }
+    }
+
+    .footer-right {
+      display: flex;
+      gap: 1rem;
+      padding-right: 2rem; // 👈 Agrega este espacio desde el borde
+      align-items: center;
+    
+      a {
+        color: #fff;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    
+        &:hover {
+          color: #1877f2;
+    
+          &[aria-label="YouTube"] {
+            color: #ff0000;
+          }
+    
+          &[aria-label="Instagram"] {
+            color: #e4405f;
+          }
+    
+          &[aria-label="X (Twitter)"] {
+            color: #1da1f2;
+          }
+    
+          &[aria-label="Correo"] {
+            color: #ea4335;
+          }
+    
+          &[aria-label="Google Maps"] {
+            color: #34a853;
+          }
+        }
+      }
+    }
+    
+  }
+}

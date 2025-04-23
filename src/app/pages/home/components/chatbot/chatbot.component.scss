@@ -1,0 +1,75 @@
+.chatbot-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+  
+    .chatbot-toggle {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25D366; // Verde WhatsApp
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      
+        i {
+          font-size: 20px; // ajusta el tamaño del ícono
+          color: white;
+        }
+      
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+  
+    .chatbot-box {
+        width: 300px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        background-color: white;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    
+   
+   
+  
+      .chatbot-header {
+        background: #128c7e;
+        color: white;
+        padding: 1rem;
+        font-weight: bold;
+      }
+  
+      .chatbot-body {
+        padding: 1rem;
+        font-size: 0.95rem;
+      }
+  
+      .chatbot-footer {
+        padding: 0.5rem;
+        border-top: 1px solid #eee;
+  
+        input {
+          width: 100%;
+          padding: 0.5rem;
+          border: none;
+          outline: none;
+          background-color: #f0f0f0;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  

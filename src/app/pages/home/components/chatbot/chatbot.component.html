@@ -1,0 +1,16 @@
+<div class="chatbot-wrapper">
+    <div class="chatbot-toggle" (click)="toggleChat()">
+      <i class="fa-solid fa-comment-dots"></i>
+    </div>
+  
+    <div class="chatbot-box" *ngIf="isChatOpen">
+      <div class="chatbot-header">Hola, soy JarbyBot 🤖</div>
+      <div class="chatbot-body">
+        <p>¿En qué puedo ayudarte?</p>
+      </div>
+      <div class="chatbot-footer">
+        <input type="text" placeholder="Escribe tu mensaje..." disabled />
+      </div>
+    </div>
+  </div>
+  

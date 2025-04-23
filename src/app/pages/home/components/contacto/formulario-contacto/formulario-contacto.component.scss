@@ -1,0 +1,46 @@
+.formulario-card {
+    background-color: #FFFBEA;
+    border-left: 5px solid #FFA420;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  
+    .icon {
+      font-size: 2.5rem;
+      color: #7D6A57;
+    }
+  
+    .contenido {
+      flex: 1;
+  
+      h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+      }
+  
+      p {
+        margin: 0.3rem 0 1rem;
+        color: #555;
+      }
+  
+      .boton-descarga {
+        background-color: #FFA420;
+        color: #fff;
+        padding: 0.4rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s ease;
+  
+        &:hover {
+          background-color: #e3920f;
+        }
+      }
+    }
+  }
+  

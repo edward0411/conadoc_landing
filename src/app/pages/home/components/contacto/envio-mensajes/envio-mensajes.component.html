@@ -1,0 +1,13 @@
+<section class="form-envio">
+    <h3>Envíanos un Mensaje</h3>
+  
+    <form (ngSubmit)="enviarMensaje()">
+      <input type="text" placeholder="Nombre*" [(ngModel)]="nombre" name="nombre" required>
+      <input type="email" placeholder="Correo electrónico*" [(ngModel)]="correo" name="correo" required>
+      <input type="tel" placeholder="Teléfono" [(ngModel)]="telefono" name="telefono">
+      <textarea placeholder="Mensaje*" [(ngModel)]="mensaje" name="mensaje" rows="5" required></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+  
