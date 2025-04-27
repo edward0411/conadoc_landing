@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })
-export class BannerComponent {
+export class BannerComponent implements OnInit, OnDestroy {
   currentSlide = 0;
 
   slides = [
@@ -39,16 +39,42 @@ export class BannerComponent {
     }
   ];
 
+  private slideInterval: any;
+  private slideDuration = 5000; // 5 segundos entre cambios
+
+  ngOnInit() {
+    this.startSlideShow();
+  }
+
+  ngOnDestroy() {
+    this.stopSlideShow();
+  }
+
+  startSlideShow() {
+    this.stopSlideShow(); // Detener cualquier intervalo anterior
+    this.slideInterval = setInterval(() => {
+      this.nextSlide();
+    }, this.slideDuration);
+  }
+
+  stopSlideShow() {
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
+  }
+
   nextSlide() {
     this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+    this.startSlideShow(); // Reiniciar el intervalo
   }
 
   prevSlide() {
-    this.currentSlide =
-      (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    this.startSlideShow(); // Reiniciar el intervalo
   }
 
   goToSlide(index: number) {
     this.currentSlide = index;
+    this.startSlideShow(); // Reiniciar el intervalo
   }
 }
